@@ -17,7 +17,6 @@
             .product-title {
                 text-align: center;
                 font-size: 2.6rem;
-                font-weight: bold;
                 color: purple;
             }
             .content {
@@ -53,6 +52,14 @@
             .publishedReleasesPanel {
                 display: flex;
             }
+            .title {
+                text-align: center;
+                font-size: 2.6rem;
+            }
+            .appname {
+                color: purple;                
+                text-decoration: underline;
+            }
         </style>
     </head>
     
@@ -82,6 +89,7 @@
                 <div class="outer-center">
                     <img id="productLogo" class="product-logo">
                     <div class="row-width-half-tab"></div>
+                    <a id="applicationName" class="link title appname" href="./product.html"></a>
                     <div id="productReleases" class="product-title"></div>
                 </div>
                 <div class="row-height-tab"></div>
@@ -166,10 +174,14 @@
                 "productLogo": {
                     "zh-cn": "res/logo.png", 
                     "en-us": "res/logo.png"
+                },             
+                "applicationName": {
+                    "zh-cn": "隐私锁应用", 
+                    "en-us": "PrivacyLock Application"
                 },
                 "productReleases": {
-                    "zh-cn": "隐私锁发布清单", 
-                    "en-us": "Privacy Lock Releases"
+                    "zh-cn": "发布清单", 
+                    "en-us": "Releases"
                 },
                 "planReleases": {
                     "zh-cn": "计划发布的版本", 
@@ -257,6 +269,7 @@
             setInnerHTML("copyrights", lang);
             //content
             setImageSrc("productLogo", lang);
+            setInnerHTML("applicationName", lang);
             setInnerHTML("productReleases", lang);
             setInnerHTML("planReleases", lang);
             setInnerHTML("planRelease1", lang);
