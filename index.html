@@ -1,9 +1,47 @@
-<html>
-  <body>
-  
-  <h1>Github pages - test</h1>
-  
-  <p>test...</p>
-  
-  </body>
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link rel="stylesheet" href="./css/styles.css" />
+        <style>
+            .splash-body {
+                background-color: purple;
+                color: white;
+            }
+            .splash {
+                height: 95vh;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+            }
+            .splash-title {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+            .splash-progress {
+                width: 20vh;
+            }
+        </style>
+    </head>
+    
+    <body class="splash-body">
+        <div class="splash">
+            <div class="image-container">
+                <img class="image-medium" src="res/hmlogo.png">
+            </div>
+            <progress id="progressbar" class="splash-progress"></progress>
+            <div class="row-height-tab"></div>
+            <div class="splash-title">幻码即未来</div>
+            <div class="splash-title">Magic Code is the future</div>
+        </div>  
+
+        <script>           
+            setTimeout(function() {
+                window.location.assign('./product.html');
+            }, 1000);
+        </script>        
+    </body> 
 </html>

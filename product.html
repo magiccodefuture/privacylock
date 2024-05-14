@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link rel="stylesheet" href="./css/styles.css" />
+        <style>
+            .product {
+                display: grid;
+                text-align: center;
+            }
+            .product-logo {
+                text-align: center;
+                height: 9vh;
+            }
+            .product-title {
+                text-align: center;
+                font-size: 8vh;
+                font-weight: bold;
+                color: purple;
+            }
+            .product-function {
+                text-align: center;
+                font-size: 5vh;
+            }
+            .product-benifit {
+                text-align: center;
+                font-size: 5vh;
+            }
+            .product-button {
+                text-align: center;
+            }
+            .product-button1 {
+                font-size: 3vh;
+                height: 6vh;
+                min-height: fit-content;
+                min-width: fit-content;
+                color: white;
+                background-color: purple;
+                border: 0.1rem solid purple;
+                padding-left: 2vh;
+                padding-right: 2vh;
+            }
+            .product-plan {
+                color: purple;
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    
+    <body class="body">
+        <header class="header">
+            <div class="header-left">  
+                <a id="companyUrl" class="link" href="./product.html">
+                    <div class="header-left">
+                        <div class="row-width-tab"></div> 
+                        <img id="companyLogo" class="image-micro"/>
+                        <div class="row-width-half-tab"></div>
+                        <div id="companyName" class="header-left"></div>                        
+                    </div>
+                </a> 
+            </div>
+            <div class="header-right">     
+                <div class="row-width-tab"></div>       
+                <a id="licenseAgreementUrl" class="link" href="./license.html"></a>    
+                <div class="row-width-tab"></div>
+                <a id="privacyStatementUrl" class="link" href="./privacy.html"></a>   
+                <div class="row-width-tab"></div>
+            </div>
+        </header>
+
+        <article>
+            <section class="section">
+                <div class="outer-center">
+                    <img id="productLogo" class="product-logo">
+                    <div class="row-width-half-tab"></div>
+                    <div id="productName" class="product-title"></div>
+                </div>
+                <div class="row-height-half-tab"></div>
+                <div class="product-button">
+                    <button class="product-button1">
+                        <div id="downloadFromWindowsStoreTips"></div>
+                    </button>
+                    <div class="row-height-half-tab"></div>
+                    <a class="product-plan" href="./plan.html"><div id="productPlanAndHistory"></div></a>
+                </div>
+                <div class="row-height-3vhs"></div>
+                <div id="productFunction" class="product-function"></div>
+                <div id="productBenifit" class="product-benifit"></div>
+                <div class="row-height-tab"></div>
+
+                <div class="image-container">
+                    <img id="homeImage" class="image-big">
+                </div>
+                <div class="image-container">
+                    <img id="leftImage1" class="image-small">
+                    <div class="row-width-18vws"></div>
+                    <img id="rightImage1" class="image-small">
+                </div>
+                <div class="image-container">
+                    <img id="lockImage" class="image-big">
+                    <div class="row-width-3vws"></div>
+                    <img id="unlockImage" class="image-big">
+                </div>
+                <div class="image-container">
+                    <img id="leftImage2" class="image-small">
+                    <div class="row-width-18vws"></div>
+                    <div class="row-width-18vws"></div>
+                    <img id="rightImage2" class="image-small">
+                </div>
+                <div class="image-container">
+                    <img id="lockResultImage" class="image-big">
+                    <div class="row-width-3vws"></div>
+                    <img id="unlockResultImage" class="image-big">
+                </div>
+                <div class="row-height-5vhs"></div>
+            </section>
+        </article> 
+        
+        <footer class="footer outer-center">
+            <div id="copyrights"></div>
+        </footer>  
+
+        <script>
+            const strings = {
+                //header
+                "title": {
+                    "zh-cn": "隐私锁——幻码未来出品", 
+                    "en-us": "PrivacyLock - from MagicCodeFuture"
+                },
+                "companyLogo": {
+                    "zh-cn": "res/hmlogo.png", 
+                    "en-us": "res/hmlogo.png"
+                },
+                "companyName": {
+                    "zh-cn": "幻码未来", 
+                    "en-us": "MagicCodeFuture"
+                },
+                "licenseAgreementUrl": {
+                    "zh-cn": "许可证协议", 
+                    "en-us": "License Agreement"
+                },
+                "privacyStatementUrl": {
+                    "zh-cn": "隐私声明", 
+                    "en-us": "Privacy Statement"
+                },
+                //footer
+                "copyrights": {
+                    "zh-cn": "©2023~2024 幻码未来，版权所有", 
+                    "en-us": "©2023~2024 MagicCodeFuture Ltd., All rights reserved"
+                },
+
+                //content
+                "productLogo": {
+                    "zh-cn": "res/logo.png", 
+                    "en-us": "res/logo.png"
+                },
+                "productName": {
+                    "zh-cn": "隐私锁", 
+                    "en-us": "Privacy Lock"
+                },
+                "downloadFromWindowsStoreTips": {
+                    "zh-cn": "从Windows商店下载...", 
+                    "en-us": "Download from Windows Store..."
+                },
+                "productPlanAndHistory": {
+                    "zh-cn": "查看发布计划和历史", 
+                    "en-us": "View release plan and history"
+                },
+                "productFunction": {
+                    "zh-cn": "用移动硬盘或U盘里的文件当锁，保护您的隐私数据", 
+                    "en-us": "Use portable disk and/or USB disk as lock to protect your privacy data"
+                },
+                "productBenifit": {
+                    "zh-cn": "使用简单、足够安全！", 
+                    "en-us": "Easy to use, secure enough!"
+                },
+                "homeImage": {
+                    "zh-cn": "res/zh-cn/home.png", 
+                    "en-us": "res/en-us/home.png"
+                },
+                "leftImage": {
+                    "zh-cn": "res/left.png", 
+                    "en-us": "res/left.png"
+                },
+                "rightImage": {
+                    "zh-cn": "res/right.png", 
+                    "en-us": "res/right.png"
+                },
+                "homeImage": {
+                    "zh-cn": "res/zh-cn/home.png", 
+                    "en-us": "res/en-us/home.png"
+                },
+                "lockImage": {
+                    "zh-cn": "res/zh-cn/lock.png", 
+                    "en-us": "res/en-us/lock.png"
+                },
+                "unlockImage": {
+                    "zh-cn": "res/zh-cn/unlock.png", 
+                    "en-us": "res/en-us/unlock.png"
+                },
+                "lockResultImage": {
+                    "zh-cn": "res/zh-cn/lock-result.png", 
+                    "en-us": "res/en-us/lock-result.png"
+                },
+                "unlockResultImage": {
+                    "zh-cn": "res/zh-cn/unlock-result.png", 
+                    "en-us": "res/en-us/unlock-result.png"
+                },
+            };
+            function setDocumentTitle(lang) {
+                document.title = strings["title"][lang];
+            }
+            function setImageSrc(imgId, lang) {
+                var img = document.getElementById(imgId);
+                img.src = strings[imgId][lang];
+            }
+            function setImageSrc1(imgId, stringId, lang) {
+                var img = document.getElementById(imgId);
+                img.src = strings[stringId][lang];
+            }
+            function setInnerHTML(elementId, lang) {
+                var element = document.getElementById(elementId);
+                element.innerHTML = strings[elementId][lang];
+            }
+            function getCurrentLanguage() {
+                var lang = navigator.language
+                    ? navigator.language
+                    : navigator.browserLanguage;
+                if (lang === undefined
+                    || lang === null
+                    || lang.length == 0)
+                {
+                    lang = "en-us";
+                }
+                return lang.toLowerCase();
+            }            
+
+            const lang = getCurrentLanguage();
+            //const lang = "zh-cn";
+            //const lang = "en-us";
+            setDocumentTitle(lang);
+            //header
+            setInnerHTML("companyName", lang);
+            setImageSrc("companyLogo", lang);
+            setInnerHTML("licenseAgreementUrl", lang);
+            setInnerHTML("privacyStatementUrl", lang);
+            //footer
+            setInnerHTML("copyrights", lang);
+            //content
+            setImageSrc("productLogo", lang);
+            setInnerHTML("productName", lang);
+            setInnerHTML("downloadFromWindowsStoreTips", lang);
+            setInnerHTML("productPlanAndHistory", lang);
+            setInnerHTML("productFunction", lang);
+            setInnerHTML("productBenifit", lang);
+            setImageSrc("homeImage", lang);
+            setImageSrc("lockImage", lang);
+            setImageSrc("unlockImage", lang);
+            setImageSrc("lockResultImage", lang);
+            setImageSrc("unlockResultImage", lang);
+            setImageSrc1("leftImage1", "leftImage", lang);
+            setImageSrc1("rightImage1", "rightImage", lang);
+            setImageSrc1("leftImage2", "leftImage", lang);
+            setImageSrc1("rightImage2", "rightImage", lang);
+        </script>
+    </body> 
+</html>

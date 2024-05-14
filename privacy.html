@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link rel="stylesheet" href="./css/styles.css" />
+        <style>
+            .title {
+                text-align: center;
+                font-size: 2.6rem;
+            }
+            .appname {
+                color: purple;                
+                text-decoration: underline;
+            }
+            .content {
+                font-size: 1.3rem;
+                margin: 0.5rem;
+            }
+        </style>
+    </head>
+    
+    <body class="body">
+        <header class="header">
+            <div class="header-left">  
+                <a id="companyUrl" class="link" href="./product.html">
+                    <div class="header-left">
+                        <div class="row-width-tab"></div> 
+                        <img id="companyLogo" class="image-micro"/>
+                        <div class="row-width-half-tab"></div>
+                        <div id="companyName" class="header-left"></div>                        
+                    </div>
+                </a> 
+            </div>
+            <div class="header-right">     
+                <div class="row-width-tab"></div>       
+                <a id="licenseAgreementUrl" class="link" href="./license.html"></a>    
+                <div class="row-width-tab"></div>
+            </div>
+        </header>
+
+        <article>
+            <section class="section">
+                <div class="outer-center">
+                    <a id="applicationName" class="link title appname" href="./product.html"></a>
+                    <div id="privayStatementTitle" class="title"></div>
+                </div>
+                <div class="row-height-half-tab"></div>
+
+                <div id="privacyContent1" class="content"></div>
+                <ul>
+                    <li id="privacyContent21" class="content"></li>
+                    <li id="privacyContent22" class="content"></li>
+                    <li id="privacyContent23" class="content"></li>
+                    <li id="privacyContent24" class="content"></li>
+                </ul>
+                <div id="privacyContent3" class="content"></div>
+                <div id="privacyContent4" class="content"></div>
+            </section>
+        </article> 
+        
+        <footer class="footer outer-center">
+            <div id="copyrights"></div>
+        </footer>  
+
+        <script>
+            const strings = {
+                //header
+                "title": {
+                    "zh-cn": "隐私声明——幻码未来", 
+                    "en-us": "Privacy Statement - MagicCodeFuture"
+                },
+                "companyLogo": {
+                    "zh-cn": "res/hmlogo.png", 
+                    "en-us": "res/hmlogo.png"
+                },
+                "companyName": {
+                    "zh-cn": "幻码未来", 
+                    "en-us": "MagicCodeFuture"
+                },
+                "licenseAgreementUrl": {
+                    "zh-cn": "许可证协议", 
+                    "en-us": "License Agreement"
+                },
+                "privacyStatementUrl": {
+                    "zh-cn": "隐私声明", 
+                    "en-us": "Privacy Statement"
+                },
+                //footer
+                "copyrights": {
+                    "zh-cn": "©2023~2024 幻码未来，版权所有", 
+                    "en-us": "©2023~2024 MagicCodeFuture Ltd., All rights reserved"
+                },
+
+                //content          
+                "applicationName": {
+                    "zh-cn": "隐私锁应用", 
+                    "en-us": "PrivacyLock Application"
+                },
+                "privayStatementTitle": {
+                    "zh-cn": "隐私政策", 
+                    "en-us": "Privacy Policy"
+                },
+                "privacyContent1": {
+                    "zh-cn": "这里的隐私政策针对您对幻码未来制作的隐私锁应用的使用。", 
+                    "en-us": "This privacy policy governs your use of PrivacyLock application that was created by MagicCodeFuture."
+                },
+                "privacyContent21": {
+                    "zh-cn": "应用程序数据保存在本地设备上，不与幻码未来或任何第三方共享。", 
+                    "en-us": "The Application data which saved locally on your device, is not shared with MagicCodeFuture or any third parties."
+                },
+                "privacyContent22": {
+                    "zh-cn": "应用程序数据可能会自动备份到OneDrive，这是Windows的备份/同步功能，根据微软的隐私政策声明它是安全的。",
+                    "en-us": "The Application data may be backed up to OneDrive automatically as part of Windows Backups/Sync which is secured according to their policies.", 
+                },
+                "privacyContent23": {
+                    "zh-cn": "用户可以请求将应用程序数据同步到Azure云，微软使用Microsoft Live凭据和Azure服务对数据进行保护。幻码未来不得将此数据用于销售、交易或向第三方提供任何其他数据，也不得将此数据用于营销目的。", 
+                    "en-us": "The Application data may be synced to Azure Cloud if requested by the user, and if so is secured using Microsoft Live Credentials and Azure Services. This data is not used by MagicCodeFuture for sale, trade, or any other supply to third parties or by MagicCodeFuture for marketing purposes."
+                },
+                "privacyContent24": {
+                    "zh-cn": "Windows Store在安装和使用应用程序时可能会收集一些匿名的客户端数据。", 
+                    "en-us": "As part of Windows Store, there is some anonymized telemetry collected when the application is installed and used."
+                },
+                "privacyContent3": {
+                    "zh-cn": "您可以通过从Windows卸载该应用来轻松地停止所有因该应用发起的数据收集相关的动作。", 
+                    "en-us": "You can easily stop all data collection by this Application by uninstalling the Application from Windows."
+                },
+                "privacyContent4": {
+                    "zh-cn": "本隐私政策可因任何原因不定时更新。如有任何更改，建议您定期查阅本隐私政策，继续使用即视为同意所有更改。通过使用本应用程序，您即同意我们按照本隐私政策的规定和我们修订的规定处理您的信息。", 
+                    "en-us": "This Privacy Policy may be updated from time to time for any reason. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes. By using the Application, you are consenting to our processing of your information as set forth in this Privacy Policy now and as amended by us."
+                },                
+            };
+            function setDocumentTitle(lang) {
+                document.title = strings["title"][lang];
+            }
+            function setImageSrc(imgId, lang) {
+                var img = document.getElementById(imgId);
+                img.src = strings[imgId][lang];
+            }
+            function setImageSrc1(imgId, stringId, lang) {
+                var img = document.getElementById(imgId);
+                img.src = strings[stringId][lang];
+            }
+            function setInnerHTML(elementId, lang) {
+                var element = document.getElementById(elementId);
+                element.innerHTML = strings[elementId][lang];
+            }
+            function getCurrentLanguage() {
+                var lang = navigator.language
+                    ? navigator.language
+                    : navigator.browserLanguage;
+                if (lang === undefined
+                    || lang === null
+                    || lang.length == 0)
+                {
+                    lang = "en-us";
+                }
+                return lang.toLowerCase();
+            }            
+
+            const lang = getCurrentLanguage();
+            setDocumentTitle(lang);
+            //header
+            setInnerHTML("companyName", lang);
+            setImageSrc("companyLogo", lang);
+            setInnerHTML("licenseAgreementUrl", lang);
+            //footer
+            setInnerHTML("copyrights", lang);
+            //content
+            setInnerHTML("applicationName", lang);
+            setInnerHTML("privayStatementTitle", lang);
+            setInnerHTML("privacyContent1", lang);
+            setInnerHTML("privacyContent21", lang);
+            setInnerHTML("privacyContent22", lang);
+            setInnerHTML("privacyContent23", lang);
+            setInnerHTML("privacyContent24", lang);
+            setInnerHTML("privacyContent3", lang);
+            setInnerHTML("privacyContent4", lang);
+        </script>
+    </body> 
+</html>

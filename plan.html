@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link rel="stylesheet" href="./css/styles.css" />
+        <style>
+            .product {
+                display: grid;
+                text-align: center;
+            }
+            .product-logo {
+                text-align: center;
+                height: 3rem;
+            }
+            .product-title {
+                text-align: center;
+                font-size: 2.6rem;
+                font-weight: bold;
+                color: purple;
+            }
+            .content {
+                font-size: 1.3rem;
+                margin: 0.5rem;
+            }
+            .bold {
+                font-weight: bold;
+                font-size: 1.6rem;
+            }
+            .plan {
+                color: purple;
+            }
+            .published {
+                color: black;
+            }
+            .releasesPanel {
+                display: grid;
+                grid-template-columns: 2% 96% 2%;
+            }
+            .product-button1 {
+                font-size: 1.3rem;
+                height: 2rem;
+                min-height: fit-content;
+                min-width: fit-content;
+                color: white;
+                background-color: purple;
+                border: 0.1rem solid purple;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                margin: 0.5rem;
+            }
+            .publishedReleasesPanel {
+                display: flex;
+            }
+        </style>
+    </head>
+    
+    <body class="body">
+        <header class="header">
+            <div class="header-left">  
+                <a id="companyUrl" class="link" href="./product.html">
+                    <div class="header-left">
+                        <div class="row-width-tab"></div> 
+                        <img id="companyLogo" class="image-micro"/>
+                        <div class="row-width-half-tab"></div>
+                        <div id="companyName" class="header-left"></div>                        
+                    </div>
+                </a> 
+            </div>
+            <div class="header-right">     
+                <div class="row-width-tab"></div>       
+                <a id="licenseAgreementUrl" class="link" href="./license.html"></a>    
+                <div class="row-width-tab"></div>
+                <a id="privacyStatementUrl" class="link" href="./privacy.html"></a>   
+                <div class="row-width-tab"></div>
+            </div>
+        </header>
+
+        <article>
+            <section class="section">
+                <div class="outer-center">
+                    <img id="productLogo" class="product-logo">
+                    <div class="row-width-half-tab"></div>
+                    <div id="productReleases" class="product-title"></div>
+                </div>
+                <div class="row-height-tab"></div>
+
+                <div class="releasesPanel">
+                    <div></div>
+                    <div>                        
+                        <div id="planReleases" class="content bold plan"></div>                     
+                        <ol reversed>
+                            <li>
+                                <div id="planRelease1" class="content"></div>
+                                <ul>
+                                    <li id="planRelease1Feature1" class="content"></li>
+                                    <li id="planRelease1Feature2" class="content"></li>
+                                </ul>
+                            </li>
+                        </ol>
+
+                        <div class="row-height-tab"></div>
+                        <hr>
+                        <div class="row-height-tab"></div>
+
+                        <div class="publishedReleasesPanel">
+                            <div id="publishedReleases" class="content bold published"></div>
+                            <button class="product-button1">
+                                <div id="downloadFromWindowsStoreTips"></div>
+                            </button>
+                        </div>                    
+                        <ol reversed>
+                            <li>
+                                <div id="publishedRelease1" class="content"></div>
+                                <ul>
+                                    <li id="publishedRelease1Feature1" class="content"></li>
+                                    <li id="publishedRelease1Feature2" class="content"></li>
+                                    <li id="publishedRelease1Feature3" class="content"></li>
+                                    <li id="publishedRelease1Feature4" class="content"></li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                    <div></div>
+                </div>
+
+                <div class="row-height-5vhs"></div>
+            </section>
+        </article> 
+        
+        <footer class="footer outer-center">
+            <div id="copyrights"></div>
+        </footer>  
+
+        <script>
+            const strings = {
+                //header
+                "title": {
+                    "zh-cn": "隐私锁——幻码未来出品", 
+                    "en-us": "PrivacyLock - from MagicCodeFuture"
+                },
+                "companyLogo": {
+                    "zh-cn": "res/hmlogo.png", 
+                    "en-us": "res/hmlogo.png"
+                },
+                "companyName": {
+                    "zh-cn": "幻码未来", 
+                    "en-us": "MagicCodeFuture"
+                },
+                "licenseAgreementUrl": {
+                    "zh-cn": "许可证协议", 
+                    "en-us": "License Agreement"
+                },
+                "privacyStatementUrl": {
+                    "zh-cn": "隐私声明", 
+                    "en-us": "Privacy Statement"
+                },
+                //footer
+                "copyrights": {
+                    "zh-cn": "©2023~2024 幻码未来，版权所有", 
+                    "en-us": "©2023~2024 MagicCodeFuture Ltd., All rights reserved"
+                },
+
+                //content
+                "productLogo": {
+                    "zh-cn": "res/logo.png", 
+                    "en-us": "res/logo.png"
+                },
+                "productReleases": {
+                    "zh-cn": "隐私锁发布清单", 
+                    "en-us": "Privacy Lock Releases"
+                },
+                "planReleases": {
+                    "zh-cn": "计划发布的版本", 
+                    "en-us": "Releases in plan"
+                },
+                "planRelease1": {
+                    "zh-cn": "版本 1.1.?.?", 
+                    "en-us": "Version 1.1.?.?"
+                },
+                "planRelease1Feature1": {
+                    "zh-cn": "支持对所选文件夹下所有明文文件加锁", 
+                    "en-us": "Support to lock all plain files in specific folder"
+                },
+                "planRelease1Feature2": {
+                    "zh-cn": "支持对所选文件夹下所有密文文件解锁", 
+                    "en-us": "Support to unlock all cipher files in specific folder"
+                },
+                "publishedReleases": {
+                    "zh-cn": "已经发布的版本", 
+                    "en-us": "Published releases"
+                },
+                "downloadFromWindowsStoreTips": {
+                    "zh-cn": "从Windows商店下载...", 
+                    "en-us": "Download from Windows Store..."
+                },
+                "publishedRelease1": {
+                    "zh-cn": "版本 1.0.20240511.01", 
+                    "en-us": "Version 1.0.20240511.01"
+                },
+                "publishedRelease1Feature1": {
+                    "zh-cn": "支持移动硬盘内文件作为锁", 
+                    "en-us": "Support file from Portable disk as lock"
+                },
+                "publishedRelease1Feature2": {
+                    "zh-cn": "支持U盘内文件作为锁", 
+                    "en-us": "Support file from USB disk as lock"
+                },
+                "publishedRelease1Feature3": {
+                    "zh-cn": "支持对所选明文文件加锁", 
+                    "en-us": "Support to lock specific plain file"
+                },
+                "publishedRelease1Feature4": {
+                    "zh-cn": "支持对所选密文文件解锁", 
+                    "en-us": "Support to unlock specific cipher file"
+                },
+            };
+            function setDocumentTitle(lang) {
+                document.title = strings["title"][lang];
+            }
+            function setImageSrc(imgId, lang) {
+                var img = document.getElementById(imgId);
+                img.src = strings[imgId][lang];
+            }
+            function setImageSrc1(imgId, stringId, lang) {
+                var img = document.getElementById(imgId);
+                img.src = strings[stringId][lang];
+            }
+            function setInnerHTML(elementId, lang) {
+                var element = document.getElementById(elementId);
+                element.innerHTML = strings[elementId][lang];
+            }
+            function getCurrentLanguage() {
+                var lang = navigator.language
+                    ? navigator.language
+                    : navigator.browserLanguage;
+                if (lang === undefined
+                    || lang === null
+                    || lang.length == 0)
+                {
+                    lang = "en-us";
+                }
+                return lang.toLowerCase();
+            }            
+
+            const lang = getCurrentLanguage();
+            //const lang = "zh-cn";
+            //const lang = "en-us";
+            setDocumentTitle(lang);
+            //header
+            setInnerHTML("companyName", lang);
+            setImageSrc("companyLogo", lang);
+            setInnerHTML("licenseAgreementUrl", lang);
+            setInnerHTML("privacyStatementUrl", lang);
+            //footer
+            setInnerHTML("copyrights", lang);
+            //content
+            setImageSrc("productLogo", lang);
+            setInnerHTML("productReleases", lang);
+            setInnerHTML("planReleases", lang);
+            setInnerHTML("planRelease1", lang);
+            setInnerHTML("planRelease1Feature1", lang);
+            setInnerHTML("planRelease1Feature2", lang);
+            setInnerHTML("publishedReleases", lang);
+            setInnerHTML("publishedReleases", lang);
+            setInnerHTML("downloadFromWindowsStoreTips", lang);
+            setInnerHTML("publishedRelease1Feature1", lang);
+            setInnerHTML("publishedRelease1Feature2", lang);
+            setInnerHTML("publishedRelease1Feature3", lang);
+            setInnerHTML("publishedRelease1Feature4", lang);
+        </script>
+    </body> 
+</html>
